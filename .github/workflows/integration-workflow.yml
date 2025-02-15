@@ -216,7 +216,7 @@ jobs:
       matrix:
         # We run the ubuntu tests on multiple Node versions with 2 shards since they're the fastest.
         node: [18, 19, 20, 21, 22]
-        platform: [[ubuntu, 20.04]]
+        platform: [[ubuntu, 24.04]]
         shard: ['1/2', '2/2']
         include:
           # We run the rest of the tests on the minimum Node version we support with 3 shards.
@@ -274,7 +274,7 @@ jobs:
         shard: ['1/4', '2/4', '3/4', '4/4']
 
     name: 'Big-endian debian w/ Node.js latest (${{matrix.shard}})'
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     if: |
       github.ref == 'refs/heads/master'
     needs: build
