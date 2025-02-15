@@ -275,8 +275,8 @@ jobs:
 
     name: 'Big-endian debian w/ Node.js latest (${{matrix.shard}})'
     runs-on: ubuntu-24.04
-    if: |
-      github.ref == 'refs/heads/master'
+    # if: |
+    #   github.ref == 'refs/heads/master'
     needs: build
 
     steps:
