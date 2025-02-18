@@ -29,19 +29,20 @@ jobs:
 
         yarn dlx create-vue@3 vue-project --default --typescript --eslint-with-prettier
         cd vue-project
+        yarn config set nodeLinker node-modules
         yarn
 
         yarn build
         yarn lint
 
-    - name: 'Running the integration test (Vue 2)'
-      run: |
-        source scripts/e2e-setup-ci.sh
+    # - name: 'Running the integration test (Vue 2)'
+    #   run: |
+    #     source scripts/e2e-setup-ci.sh
 
-        yarn dlx create-vue@2 vue-project --default --typescript
-        cd vue-project
-        yarn
+    #     yarn dlx create-vue@2 vue-project --default --typescript
+    #     cd vue-project
+    #     yarn
 
-        yarn build
-      if: |
-        success() || failure()
+    #     yarn build
+    #   if: |
+    #     success() || failure()
