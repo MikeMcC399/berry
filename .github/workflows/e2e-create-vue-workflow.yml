@@ -1,15 +1,16 @@
 #
 on:
-  schedule:
-  - cron: '0 */4 * * *'
-  push:
-    branches:
-    - master
-  pull_request:
-    paths:
-    - .github/actions/prepare/action.yml
-    - .github/workflows/e2e-create-vue-workflow.yml
-    - scripts/e2e-setup-ci.sh
+  # schedule:
+  # - cron: '0 */4 * * *'
+  # push:
+  #   branches:
+  #   - master
+  # pull_request:
+  #   paths:
+  #   - .github/actions/prepare/action.yml
+  #   - .github/workflows/e2e-create-vue-workflow.yml
+  #   - scripts/e2e-setup-ci.sh
+  workflow_dispatch:
 
 name: 'E2E Create-Vue'
 jobs:
