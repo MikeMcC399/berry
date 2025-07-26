@@ -30,7 +30,7 @@ jobs:
         source scripts/e2e-setup-ci.sh
         yarn create vite react --template preact && cd react
 
-        yarn add @babel/preset-env
+        yarn add @babel/core
 
         yarn dlx storybook@latest init --yes --no-dev
         yarn build-storybook
