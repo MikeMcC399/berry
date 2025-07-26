@@ -10,6 +10,7 @@ on:
     - .github/actions/prepare/action.yml
     - .github/workflows/e2e-storybook-workflow.yml
     - scripts/e2e-setup-ci.sh
+  workflow_dispatch:
 
 name: 'E2E Storybook'
 env:
