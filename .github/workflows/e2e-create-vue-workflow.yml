@@ -27,9 +27,9 @@ jobs:
       run: |
         source scripts/e2e-setup-ci.sh
 
-        yarn dlx create-vue@3 vue-project --default --eslint
+        yarn dlx create-vue@~3.16 vue-project --default --eslint
         cd vue-project
-        yarn add vite@^6.3.5 vue-eslint-parser -D
+        yarn add vue-eslint-parser -D
         yarn
 
         yarn build
