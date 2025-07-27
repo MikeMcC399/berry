@@ -28,9 +28,7 @@ jobs:
     - name: 'Running the integration test'
       run: |
         source scripts/e2e-setup-ci.sh
-        yarn create vite react --template preact && cd react
-
-        yarn add @babel/core
+        yarn create vite react --template react && cd react
 
         yarn dlx storybook@latest init --yes --no-dev
         yarn build-storybook
