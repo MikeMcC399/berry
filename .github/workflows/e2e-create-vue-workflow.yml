@@ -29,6 +29,7 @@ jobs:
 
         yarn dlx create-vue@3 vue-project --default --typescript --eslint
         cd vue-project
+        yarn add vite@^6.3.5 vue-eslint-parser -D
         yarn
 
         yarn build
