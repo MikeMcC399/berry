@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - run: |
         git fetch --no-tags --unshallow origin HEAD master
 
@@ -173,7 +173,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
     - name: 'Use Node.js ${{ env.node-version }}'
       uses: actions/setup-node@v4
@@ -279,7 +279,7 @@ jobs:
       id-token: write
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
     - name: 'Use Node.js ${{matrix.node}}'
       uses: actions/setup-node@v4
@@ -316,7 +316,7 @@ jobs:
     needs: build
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
     - uses: actions/download-artifact@v4
       with:
