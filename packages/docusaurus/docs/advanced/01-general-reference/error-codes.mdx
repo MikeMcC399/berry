@@ -462,7 +462,7 @@ jobs:
     permissions:
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: npm install -g corepack && corepack enable
       - run: yarn && yarn build
       - run: yarn config set npmAuthToken '${{ secrets.NPM_TOKEN }}'
